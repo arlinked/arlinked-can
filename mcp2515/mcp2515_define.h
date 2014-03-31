@@ -1,24 +1,21 @@
 /**
- *  mcp2515_define.h
- *  2014 Copyright (c) Arlinked Inc.  All right reserved.
+ * File: mcp2515_define.h defines about mcp2515
+ * Copyright (C) 2014 Arlinked Inc. All right reserved.
  *
- *  Author: toe jiang
- *  Contributor: Cory J. Fowler
- *  2014-1-16
- *  This library is free software; you can redistribute it and/or
- *  modify it under the terms of the GNU Lesser General Public
- *  License as published by the Free Software Foundation; either
- *  version 2.1 of the License, or (at your option) any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
  *
- *  This library is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- *  Lesser General Public License for more details.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU Lesser General Public
- *  License along with this library; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-
- *  1301  USA
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
  **/
 
 #ifndef __MCP2515_DEFINE_H__
@@ -28,16 +25,16 @@
 #include <SPI.h>
 #include <inttypes.h>
 
-#ifndef INT32U
-#define INT32U unsigned long
+#ifndef uint32
+#define uint32 unsigned long
 #endif
 
-#ifndef INT8U
-#define INT8U byte
+#ifndef uint8
+#define uint8 byte
 #endif
 
 // if print debug information
-#define DEBUG_MODE 1
+#define CAN_DEBUG_MODE 1
 
 /**
  *   Begin mt
@@ -264,8 +261,8 @@
 #define MCP_16MHz_200kBPS_CFG3 (0x87)
 
 #define MCP_16MHz_125kBPS_CFG1 (0x03)
-#define MCP_16MHz_125kBPS_CFG2 (0xF0)
-#define MCP_16MHz_125kBPS_CFG3 (0x86)
+#define MCP_16MHz_125kBPS_CFG2 (0x90) // 0xF0
+#define MCP_16MHz_125kBPS_CFG3 (0x02) // 0x86
 
 #define MCP_16MHz_100kBPS_CFG1 (0x03)
 #define MCP_16MHz_100kBPS_CFG2 (0xFA)
