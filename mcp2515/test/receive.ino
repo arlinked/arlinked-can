@@ -12,7 +12,7 @@ const uint8 pinCS = 10;
 
 unsigned char stmp[8] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
 
-void setup()
+extern "C" void setup()
 {
 	Serial.begin(9600);
 	pinMode (pinCS, OUTPUT);
@@ -26,7 +26,7 @@ void setup()
 	Serial.println("MCP2515 Library Receive Example...");
 }
 
-void loop()
+extern "C" void loop()
 {
 	char tmp[64];
 	CAN0.readMsgBuf(&len, rxBuf);              // Read data: len = data length, buf = data byte(s)

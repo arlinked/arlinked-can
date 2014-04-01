@@ -19,6 +19,7 @@
  **/
 
 #include "mcp2515_can.h"
+#include <SPI.h>
 
 #define spi_transfer SPI.transfer
 
